@@ -10,6 +10,11 @@
           <router-link to="/portfolio" activeClass="active" tag="li"
             ><a>Portfolio</a></router-link
           >
+
+          <router-link to="/todos" activeClass="active" tag="li"
+            ><a>TODOs</a></router-link
+          >
+
           <router-link to="/stocks" activeClass="active" tag="li"
             ><a>Stocks</a></router-link
           >
