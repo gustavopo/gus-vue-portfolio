@@ -1,12 +1,12 @@
 <template>
   <div class="container card">
-    <h3>Add new TODO:</h3>
+    <h3>Add new ToDo:</h3>
 
     <div class="card body">
       <div class="row">
         <div class="col-xs-6">
           <input
-            v-bind="newTodo"
+            v-model="todoTitle"
             type="text"
             class="form-control"
             placeholder="New TODO"
@@ -15,12 +15,12 @@
           />
         </div>
         <div class="col-xs-6">
-          <button class="btn btn-outline-secondary" @click="addTodo" type="button">Add</button>
+          <button class="btn btn-primary" @click="addTodo" type="button">Add</button>
         </div>
       </div>
     </div>
     <div>
-      {{ newTodo }}
+      <!--{{ newTodo }}-->
       <div></div>
     </div>
   </div>
@@ -29,11 +29,22 @@
 export default {
   data: function() {
     return {
-      newTodo: ''
+      todoTitle: ''
     };
   },
   methods: {
-    addTodo() {}
+    addTodo() {
+      const todo = {
+        id: '',
+        title: this.todoTitle
+      };
+      if (!todo.title == '') {
+        console.log(todo);
+        this.$store.dispatch('addTodo', todo);
+      } else {
+        alert('Please write your new ToDo!');
+      }
+    }
   }
 };
 </script>

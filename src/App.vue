@@ -18,6 +18,7 @@ export default {
   created() {
     //Init stocks
     this.$store.dispatch('initStocks');
+    this.$store.dispatch('initTodos');
   }
 };
 </script>
