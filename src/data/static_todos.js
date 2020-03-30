@@ -2,11 +2,7 @@ export default [
   {
     id: 1,
     title: 'Go workout',
-<<<<<<< HEAD
-    completed: false
-=======
     completed: true
->>>>>>> feature/TodoComponent
   },
   {
     id: 2,
@@ -16,11 +12,7 @@ export default [
   {
     id: 3,
     title: 'Cook food',
-<<<<<<< HEAD
-    completed: false
-=======
     completed: true
->>>>>>> feature/TodoComponent
   },
   {
     id: 4,
