@@ -33,10 +33,21 @@ export default {
     };
   },
   methods: {
+<<<<<<< HEAD
     addTodo() {
       const todo = {
         id: '',
         title: this.todoTitle
+=======
+<<<<<<< Updated upstream
+    addTodo() {}
+=======
+    addTodo() {
+      const todo = {
+        id: '',
+        title: this.todoTitle,
+        completed: false
+>>>>>>> feature/TodoComponent
       };
       if (!todo.title == '') {
         console.log(todo);
@@ -45,6 +56,10 @@ export default {
         alert('Please write your new ToDo!');
       }
     }
+<<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
+>>>>>>> feature/TodoComponent
   }
 };
 </script>
