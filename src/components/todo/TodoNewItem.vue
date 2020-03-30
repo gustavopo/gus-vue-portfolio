@@ -33,7 +33,23 @@ export default {
     };
   },
   methods: {
+<<<<<<< Updated upstream
     addTodo() {}
+=======
+    addTodo() {
+      const todo = {
+        id: '',
+        title: this.todoTitle,
+        completed: false
+      };
+      if (!todo.title == '') {
+        console.log(todo);
+        this.$store.dispatch('addTodo', todo);
+      } else {
+        alert('Please write your new ToDo!');
+      }
+    }
+>>>>>>> Stashed changes
   }
 };
 </script>
