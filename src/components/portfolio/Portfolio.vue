@@ -11,7 +11,7 @@ import Stock from './Stock.vue';
 export default {
   computed: {
     ...mapGetters({
-      stocks: 'stocksPortfolio'
+      stocks: 'stockPortfolio'
     })
   },
   components: {
