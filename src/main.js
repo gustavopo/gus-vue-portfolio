@@ -1,5 +1,6 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
+import VueResource from 'vue-resource';
 
 import App from './App.vue';
 import { routes } from './routes';
@@ -7,8 +8,13 @@ import { routes } from './routes';
 import store from './store/store.js';
 
 Vue.use(VueRouter);
+Vue.use(VueResource);
 
-Vue.filter('currency', (value) => {
+//Init vue Resource
+Vue.http.options.root = 'https://vuejs-gus-project.firebaseio.com/';
+
+//Filter creation
+Vue.filter('currency', value => {
   return '$' + value.toLocaleString();
 });
 
